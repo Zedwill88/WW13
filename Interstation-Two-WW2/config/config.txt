@@ -189,9 +189,6 @@ DISCORDURL https://discord.gg/3zjPhfb
 ## Wiki address
 # WIKIURL http://www.tgstation13.org/wiki
 
-##Rules address
-# RULESURL http://www.tgstation13.org/wiki/Rules
-
 ##Github address
 GITHUBURL https://github.com/kachnov/WW13/issues
 
