@@ -3,7 +3,7 @@
 SERVER_NAME Trenches of War(Unofficial No Mans Land)
 
 ## What features do you want to advertise on your hub message?
-HUB_FEATURES Apply for staff today!!
+HUB_FEATURES All new gun sprites!!
 
 ## The main content of your hub message
 HUB_BODY <i>1942, SEASON, TIME_OF_DAY, Ukraine</i><br>

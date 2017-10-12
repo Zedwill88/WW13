@@ -1,10 +1,12 @@
 <h1>Welcome to Trenches of War!!</h1>
-<b>Rules: 
+<b>Rules: NEW RULES, READ ME!!
 1:You are expected to follow the orders of your superior officers.
 2:Friendly fire is a bannable offence
 3:ERP is not allowed here, we may have underage players on the server, keep this in mind.
-4:Mid-High RP is expected, make the fight entertaining(Killing on sight is permitted between Russians and Germans, Jews and Spies are not to be killed on sight, you must at least roleplay their capture, keeps the game fun for everybody)Note-this one is a guideline rather than a rule.
-5:Do not suicide, repeat offences will result in 3 day ban</b>
+4:Mid-High RP is expected. 
+5:Do not suicide as an officer, repeat offences will result in 3 day ban
+6:Keep the tank off the train, it causes lag.
+7:Russians, do not block your ladders with barricades, mines are ok.</b>
 
 <b>Discord:<i>http://discord.gg/8bPeM2j</i></b>
 <b>GitHub:<i>https://github.com/Zedwill88/WW13</i></b>
