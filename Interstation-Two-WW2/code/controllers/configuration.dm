@@ -60,11 +60,11 @@ var/list/gamemode_cache = list()
 	var/allow_random_events = 0			// enables random events mid-round when set to 1
 	var/allow_ai = 1					// allow ai job
 	var/hostedby = null
-	var/respawn_delay = 30
+	var/respawn_delay = 3
 	var/guest_jobban = 1
 	var/usewhitelist = 0
 	var/use_job_whitelist =  0
-	var/kick_inactive = 0				//force disconnect for inactive players after this many minutes, if non-0
+	var/kick_inactive = 30				//force disconnect for inactive players after this many minutes, if non-0
 	var/show_mods = 0
 	var/show_mentors = 0
 	var/mods_can_tempban = 0
@@ -250,8 +250,8 @@ var/list/gamemode_cache = list()
 	var/german_reinforcements_at_once = 10
 	var/russian_reinforcements_at_once = 10
 
-	var/min_players_for_spies = 10
-	var/min_players_for_jews = 10
+	var/min_players_for_spies = 5
+	var/min_players_for_jews = 5
 
 	//WW2 donor shit
 
