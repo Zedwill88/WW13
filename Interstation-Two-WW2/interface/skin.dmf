@@ -1015,6 +1015,7 @@ window "mainwindow"
 		size = 640x440
 		anchor1 = none
 		anchor2 = none
+		background-color = none
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Space Station 13"
@@ -1027,6 +1028,7 @@ window "mainwindow"
 		size = 80x20
 		anchor1 = 100,100
 		anchor2 = none
+		background-color = none
 		saved-params = ""
 		text = "Hotkey Toggle"
 		command = ".winset \"mainwindow.macro!=macro ? mainwindow.macro=macro hotkey_toggle.is-checked=false input.focus=true : mainwindow.macro=hotkeymode hotkey_toggle.is-checked=true mapwindow.map.focus=true\""
@@ -1037,6 +1039,7 @@ window "mainwindow"
 		size = 634x416
 		anchor1 = 0,0
 		anchor2 = 100,100
+		background-color = none
 		saved-params = "splitter"
 		right = "rpane"
 		is-vert = true
@@ -1056,6 +1059,7 @@ window "mainwindow"
 		size = 40x20
 		anchor1 = 100,100
 		anchor2 = none
+		background-color = none
 		saved-params = "is-checked"
 		text = "Chat"
 		command = ".winset \"saybutton.is-checked=true?input.command=\"!say \\\"\" macrobutton.is-checked=false:input.command=\""
@@ -1092,10 +1096,11 @@ window "mapwindow"
 window "outputwindow"
 	elem "outputwindow"
 		type = MAIN
-		pos = 464,0
+		pos = 281,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
+		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -1117,35 +1122,13 @@ window "outputwindow"
 window "rpane"
 	elem "rpane"
 		type = MAIN
-		pos = 464,0
+		pos = 281,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
 		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
-	elem "button6"
-		type = BUTTON
-		pos = 413,0
-		size = 67x16
-		anchor1 = none
-		anchor2 = none
-		background-color = none
-		saved-params = "is-checked"
-		text = "Forum"
-		command = "forum"
-		group = "rpanemode"
-	elem "donbutton"
-		type = BUTTON
-		pos = 485,0
-		size = 67x16
-		anchor1 = none
-		anchor2 = none
-		background-color = none
-		saved-params = "is-checked"
-		text = "Donate"
-		command = "donate"
-		group = "rpanemode"
 	elem "rpanewindow"
 		type = CHILD
 		pos = 0,0
@@ -1156,20 +1139,9 @@ window "rpane"
 		saved-params = "splitter"
 		right = "outputwindow"
 		is-vert = false
-	elem "rulesb"
-		type = BUTTON
-		pos = 278,0
-		size = 60x16
-		anchor1 = none
-		anchor2 = none
-		background-color = none
-		saved-params = "is-checked"
-		text = "Rules"
-		command = "rules"
-		group = "rpanemode"
 	elem "discord"
 		type = BUTTON
-		pos = 341,0
+		pos = 216,0
 		size = 67x16
 		anchor1 = none
 		anchor2 = none
@@ -1180,7 +1152,7 @@ window "rpane"
 		group = "rpanemode"
 	elem "forumb"
 		type = BUTTON
-		pos = 215,0
+		pos = 148,0
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
@@ -1188,17 +1160,6 @@ window "rpane"
 		saved-params = "is-checked"
 		text = "Github"
 		command = "github"
-		group = "rpanemode"
-	elem "wikib"
-		type = BUTTON
-		pos = 152,0
-		size = 60x16
-		anchor1 = none
-		anchor2 = none
-		background-color = none
-		saved-params = "is-checked"
-		text = "Wiki"
-		command = "wiki"
 		group = "rpanemode"
 	elem "textb"
 		type = BUTTON
@@ -1212,19 +1173,6 @@ window "rpane"
 		text = "Text"
 		command = ".winset \"rpanewindow.left=;\""
 		is-checked = true
-		group = "rpanemode"
-		button-type = pushbox
-	elem "browseb"
-		type = BUTTON
-		pos = 556,0
-		size = 60x16
-		anchor1 = none
-		anchor2 = none
-		background-color = none
-		is-visible = false
-		saved-params = "is-checked"
-		text = "Browser"
-		command = ".winset \"rpanewindow.left=browserwindow\""
 		group = "rpanemode"
 		button-type = pushbox
 	elem "infob"

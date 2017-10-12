@@ -6,7 +6,7 @@ var/list/gamemode_cache = list()
 
 	var/nudge_script_path = "nudge.py"  // where the nudge.py script is located
 
-	var/list/lobby_screens = list("titlenew") // Which lobby screens are available
+	var/list/lobby_screens = list("title1", "title2", "title3") // Which lobby screens are available
 
 	var/log_ooc = 0						// log OOC channel
 	var/log_access = 0					// log login/logout
@@ -155,9 +155,6 @@ var/list/gamemode_cache = list()
 	var/slime_delay = 0
 	var/animal_delay = 0
 
-
-	var/admin_legacy_system = 0	//Defines whether the server uses the legacy admin system with admins.txt or the SQL system. Config option in config.txt
-	var/ban_legacy_system = 0	//Defines whether the server uses the legacy banning system with the files in /data or the SQL system. Config option in config.txt
 	var/use_age_restriction_for_jobs = 0   //Do jobs use account age restrictions?   --requires database
 	var/use_age_restriction_for_antags = 0 //Do antags use account age restrictions? --requires database
 
@@ -224,6 +221,7 @@ var/list/gamemode_cache = list()
 
 	var/hub = 0
 	var/testing_port = -1
+	var/hubtesting_port = -2
 	var/open_hub_discord_in_new_window = 1
 	var/hub_body = ""
 	var/hub_features = ""
@@ -386,6 +384,8 @@ var/list/gamemode_cache = list()
 					config.hub = 1
 				if ("testing_port")
 					config.testing_port = text2num(value)
+				if ("hubtesting_port")
+					config.hubtesting_port = text2num(value)
 				if ("open_hub_discord_in_new_window")
 					config.open_hub_discord_in_new_window = text2num(value)
 				if ("hub_body")
@@ -432,13 +432,13 @@ var/list/gamemode_cache = list()
 
 				if ("resource_urls")
 					config.resource_urls = splittext(value, " ")
-
+/*
 				if ("admin_legacy_system")
 					config.admin_legacy_system = 1
 
 				if ("ban_legacy_system")
 					config.ban_legacy_system = 1
-
+*/
 				if ("use_age_restriction_for_jobs")
 					config.use_age_restriction_for_jobs = 1
 

@@ -1,4 +1,5 @@
 //Please use mob or src (not usr) in these procs. This way they can be called in the same fashion as procs.
+/*
 /client/verb/wiki()
 	set name = "wiki"
 	set desc = "Visit the wiki"
@@ -34,6 +35,7 @@
 	else
 		src << "<span class='warning'>The donation URL is not set in the server configuration.</span>"
 	return
+	*/
 
 /client/verb/github()
 	set name = "Github"
@@ -59,6 +61,7 @@
 		src << "<span class='warning'>The Discord URL is not set in the server configuration.</span>"
 	return
 
+/*
 #define RULES_FILE "config/rules.html"
 /client/verb/rules()
 	set name = "Rules"
@@ -73,6 +76,7 @@
 	return
 //	src << browse(/*file(RULES_FILE)*/"https://discord.gg/3zjPhfb", "window=rules;size=480x320")
 #undef RULES_FILE
+*/
 
 /client/verb/hotkeys_help()
 	set name = "hotkeys-help"
