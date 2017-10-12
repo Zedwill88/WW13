@@ -15,6 +15,7 @@ datum/controller/vote
 	var/list/current_votes = list()
 	var/list/additional_text = list()
 	var/auto_muted = 0
+	var/cquest = ""
 
 	New()
 		if(vote != src)
@@ -204,7 +205,7 @@ datum/controller/vote
 							choices.Add(antag.role_text)
 					choices.Add("None")
 				if("custom")
-					cp1251_to_utf8(rhtml_encode(input(usr,"What is the vote for?") as text|null))
+					cquest = cp1251_to_utf8(rhtml_encode(input(usr,"What is the vote for?") as text|null))
 					for(var/i=1,i<=10,i++)
 						var/option = cp1251_to_utf8(capitalize(rhtml_encode(input(usr,"Please enter an option or hit cancel to finish") as text|null)))
 						if(!option || mode || !usr.client)	break
@@ -245,7 +246,7 @@ datum/controller/vote
 
 		. = "<html><head><title>Voting Panel</title></head><body>"
 		if(mode)
-			if(question)	. += "<h2>Vote: '[question]'</h2>"
+			if("custom")	. += "<h2>Vote: [cquest]</h2>"
 			else			. += "<h2>Vote: [capitalize(mode)]</h2>"
 			. += "Time Left: [time_remaining] s<hr>"
 			. += "<table width = '100%'><tr><td align = 'center'><b>Choices</b></td><td align = 'center'><b>Votes</b></td>"
