@@ -1,5 +1,4 @@
 //Please use mob or src (not usr) in these procs. This way they can be called in the same fashion as procs.
-
 /client/verb/wiki()
 	set name = "wiki"
 	set desc = "Visit the wiki"
@@ -26,7 +25,7 @@
 
 /client/verb/donate()
 	set name = "donate"
-	set desc = "Support the server via paypal."
+	set desc = "Give us the shills oy vey"
 	set hidden = 1
 	if( config.donationurl )
 		if(alert("This will open Paypal in your browser. Are you sure?",,"Yes","No")=="No")
@@ -60,32 +59,6 @@
 		src << "<span class='warning'>The Discord URL is not set in the server configuration.</span>"
 	return
 
-
-<<<<<<< HEAD
-/*
-=======
-/client/verb/report_a_bug()
-	set name = "report a bug"
-	set desc = "Report a bug, and a coder will eventually put in on Github."
-	set hidden = 1
-	var/bugname = input("What do you name this bug?") as text
-	var/bugdesc = input("What is the bug's description?") as text
-	var/bugrep = input("How do you reproduce the bug?") as text
-	var/anything_else = input("Anything else?") as text
-
-	if (bugname && bugdesc && bugrep && anything_else)
-		establish_db_connection()
-		if (database)
-			if (database.execute("INSERT INTO bug_reports (name, desc, rep, other) VALUES ('[bugname]', '[bugdesc]', '[bugrep]', '[anything_else]');"))
-				src << "<span class = 'notice'>Your bug was successfully reported. Thank you!</span>"
-			else
-				src << "<span class = 'warning'>A database error occured; your bug was NOT reported.</span>"
-		else
-			src << "<span class = 'warning'>A database error occured; your bug was NOT reported.</span>"
-	else
-		src << "<span class = 'warning'>Please fill in all fields!</span>"
-
->>>>>>> 12030a4f0f06f91ada7c5eb7dd0d7545bc614396
 #define RULES_FILE "config/rules.html"
 /client/verb/rules()
 	set name = "Rules"
@@ -100,7 +73,6 @@
 	return
 //	src << browse(/*file(RULES_FILE)*/"https://discord.gg/3zjPhfb", "window=rules;size=480x320")
 #undef RULES_FILE
-*/
 
 /client/verb/hotkeys_help()
 	set name = "hotkeys-help"
